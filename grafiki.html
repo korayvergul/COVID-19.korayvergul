@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GRAFİK</title>
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<script>
+
+    window.onload = function () {
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "light2",
+        title:{
+            text: "TÜRKİYE-İNGİLTERE COVİD-19 GRAFİĞİ"
+        },
+        axisX:{
+            valueFormatString: "DD MMM",
+            crosshair: {
+                enabled: true,
+                snapToDataPoint: true
+            }
+        },
+        axisY: {
+            title: "TOPLAM VAKA SAYILARI",
+            includeZero: true,
+            crosshair: {
+                enabled: true
+            }
+        },
+        toolTip:{
+            shared:true
+        },
+        legend:{
+            cursor:"pointer",
+            verticalAlign: "bottom",
+            horizontalAlign: "left",
+            dockInsidePlotArea: true,
+            itemclick: toogleDataSeries
+        },
+        data: [{
+            type: "line",
+            showInLegend: true,
+            name: "İNGİLTERE",
+            markerType: "square",
+            xValueFormatString: "DD MMM, YYYY",
+            color: "#66CCFF",
+            dataPoints: [
+            { x: new Date(2020, 11, 01), y: 988197 },
+                { x: new Date(2020, 11, 02), y: 1007011 },
+                { x: new Date(2020, 11, 03), y: 1026632 },
+                { x: new Date(2020, 11, 04), y: 1051317 },
+                { x: new Date(2020, 11, 05), y: 1075077 },
+                { x: new Date(2020, 11, 06), y: 1098009 },
+                { x: new Date(2020, 11, 07), y: 1122553 },
+                { x: new Date(2020, 11, 08), y: 1142969 },
+                { x: new Date(2020, 11, 09), y: 1164125 },
+                { x: new Date(2020, 11, 10), y: 1184005 },
+                { x: new Date(2020, 11, 11), y: 1206360 },
+                { x: new Date(2020, 11, 12), y: 1239267 },
+                { x: new Date(2020, 11, 13), y: 1266192 },
+                { x: new Date(2020, 11, 14), y: 1292590 },
+                { x: new Date(2020, 11, 15), y: 1317384 },
+                { x: new Date(2020, 11, 16), y: 1338534 },
+                { x: new Date(2020, 11, 17), y: 1357987 },
+                { x: new Date(2020, 11, 18), y: 1377067 },
+                { x: new Date(2020, 11, 19), y: 1399481 },
+                { x: new Date(2020, 11, 20), y: 1419222 },
+                { x: new Date(2020, 11, 21), y: 1438757 },
+                { x: new Date(2020, 11, 22), y: 1457021 },
+                { x: new Date(2020, 11, 23), y: 1472265 },
+                { x: new Date(2020, 11, 24), y: 1482956 },
+                { x: new Date(2020, 11, 25), y: 1500474 },
+                { x: new Date(2020, 11, 26), y: 1517531 },
+                { x: new Date(2020, 11, 27), y: 1531750 },
+                { x: new Date(2020, 11, 28), y: 1547142 },
+                { x: new Date(2020, 11, 29), y: 1559082 },
+                { x: new Date(2020, 11, 30), y: 1571209 },
+                { x: new Date(2020, 12, 01), y: 1584035 },
+                { x: new Date(2020, 12, 02), y: 1599557 },
+                { x: new Date(2020, 12, 03), y: 1614021 },
+                { x: new Date(2020, 12, 04), y: 1629815 },
+                { x: new Date(2020, 12, 05), y: 1644957 },
+                { x: new Date(2020, 12, 06), y: 1661997 },
+                { x: new Date(2020, 12, 07), y: 1676526 },
+                { x: new Date(2020, 12, 08), y: 1688208 },
+                { x: new Date(2020, 12, 09), y: 1704253 },
+                { x: new Date(2020, 12, 10), y: 1724701 },
+                { x: new Date(2020, 12, 11), y: 1745949 },
+                { x: new Date(2020, 12, 12), y: 1766930 },
+                { x: new Date(2020, 12, 13), y: 1785233 },
+                { x: new Date(2020, 12, 14), y: 1805264 },
+                { x: new Date(2020, 12, 15), y: 1823208 },
+                { x: new Date(2020, 12, 16), y: 1847757 },
+                { x: new Date(2020, 12, 17), y: 1882608 },
+                { x: new Date(2020, 12, 18), y: 1910626 },
+                { x: new Date(2020, 12, 19), y: 1937144 },
+                { x: new Date(2020, 12, 20), y: 1972746 },
+                { x: new Date(2020, 12, 21), y: 2005895 },
+                { x: new Date(2020, 12, 22), y: 2042007 },
+                { x: new Date(2020, 12, 23), y: 2080500 },
+                { x: new Date(2020, 12, 24), y: 2118962 },
+                { x: new Date(2020, 12, 25), y: 2151117 },
+                { x: new Date(2020, 12, 26), y: 2185600 },
+                { x: new Date(2020, 12, 27), y: 2217593 },
+                { x: new Date(2020, 12, 28), y: 2258621 },
+                { x: new Date(2020, 12, 29), y: 2311298 },
+                { x: new Date(2020, 12, 30), y: 2360340 },
+                { x: new Date(2020, 12, 31), y: 2415268 },
+                { x: new Date(2021, 01, 01), y: 2467940 },
+                { x: new Date(2021, 01, 02), y: 2525219 },
+                { x: new Date(2021, 01, 03), y: 2579755 },
+                { x: new Date(2021, 01, 04), y: 2638132 },
+                { x: new Date(2021, 01, 05), y: 2698174 },
+                { x: new Date(2021, 01, 06), y: 2759455 },
+                { x: new Date(2021, 01, 07), y: 2810911 },
+                { x: new Date(2021, 01, 08), y: 2877639 },
+                { x: new Date(2021, 01, 09), y: 2936541 },
+                { x: new Date(2021, 01, 10), y: 2990918 },
+                { x: new Date(2021, 01, 11), y: 3036558 },
+                { x: new Date(2021, 01, 12), y: 3080848 },
+                { x: new Date(2021, 01, 13), y: 3126809 },
+                { x: new Date(2021, 01, 14), y: 3174243 },
+                { x: new Date(2021, 01, 15), y: 3228724 }
+    
+            ]
+        },
+    
+        {
+			type: "line",
+            showInLegend: true,
+            name: "TÜRKİYE",
+            color: "#CC0000",
+            lineDashType: "circle",
+            dataPoints: [
+    
+		{ x: new Date(2020, 11, 01), y: 377473 },
+        { x: new Date(2020, 11, 02), y: 379775 },
+        { x: new Date(2020, 11, 03), y:382118 },
+        { x: new Date(2020, 11, 04), y: 384509 },
+        { x: new Date(2020, 11, 05), y: 386820 },
+        { x: new Date(2020, 11, 06), y: 389256 },
+        { x: new Date(2020, 11, 07), y: 391739 },
+        { x: new Date(2020, 11, 08), y: 394255 },
+        { x: new Date(2020, 11, 09), y: 396831 },
+        { x: new Date(2020, 11, 10), y: 399360 },
+        { x: new Date(2020, 11, 11), y: 402053 },
+        { x: new Date(2020, 11, 12), y: 404894 },
+        { x: new Date(2020, 11, 13), y: 407939 },
+        { x: new Date(2020, 11, 14), y: 411055 },
+        { x: new Date(2020, 11, 15), y:  414278},
+        { x: new Date(2020, 11, 16), y: 417594 },
+        { x: new Date(2020, 11, 17), y:  421413},
+        { x: new Date(2020, 11, 18), y:  425628},
+        { x: new Date(2020, 11, 19), y:  430170},
+        { x: new Date(2020, 11, 20), y:  435273},
+        { x: new Date(2020, 11, 21), y: 440805 },
+        { x: new Date(2020, 11, 22), y:  446822},
+        { x: new Date(2020, 11, 23), y: 453535 },
+        { x: new Date(2020, 11, 24), y:  460916},
+        { x: new Date(2020, 11, 25), y:  467730},
+        { x: new Date(2020, 11, 26), y: 474606 },
+        { x: new Date(2020, 11, 27), y:  481198},
+        { x: new Date(2020, 11, 28), y:  487912},
+        { x: new Date(2020, 11, 29), y:  494351},
+        { x: new Date(2020, 11, 30), y:  500865},
+        { x: new Date(2020, 12, 01), y:  506966},
+        { x: new Date(2020, 12, 02), y:  513656},
+        { x: new Date(2020, 12, 03), y:  520167},
+        { x: new Date(2020, 12, 04), y:  527070},
+        { x: new Date(2020, 12, 05), y:  533198},
+        { x: new Date(2020, 12, 06), y:  539291},
+        { x: new Date(2020, 12, 07), y:  545711},
+        { x: new Date(2020, 12, 08), y:  552304},
+        { x: new Date(2020, 12, 09), y:  558517},
+        { x: new Date(2020, 12, 10), y:  1748567},
+        { x: new Date(2020, 12, 11), y: 1780673 },
+        { x: new Date(2020, 12, 12), y:  1809809},
+        { x: new Date(2020, 12, 13), y:  1836728},
+        { x: new Date(2020, 12, 14), y:  1866345},
+        { x: new Date(2020, 12, 15), y:  1898447},
+        { x: new Date(2020, 12, 16), y:  1928165},
+        { x: new Date(2020, 12, 17), y:  1955680},
+        { x: new Date(2020, 12, 18), y:  1982090},
+        { x: new Date(2020, 12, 19), y:  2004285},
+        { x: new Date(2020, 12, 20), y:  2024601},
+        { x: new Date(2020, 12, 21), y:  2043704},
+        { x: new Date(2020, 12, 22), y:  2062960},
+        { x: new Date(2020, 12, 23), y:  2082610},
+        { x: new Date(2020, 12, 24), y:  2100712},
+        { x: new Date(2020, 12, 25), y:  2118255},
+        { x: new Date(2020, 12, 26), y:  2133373},
+        { x: new Date(2020, 12, 27), y:  2147538},
+        { x: new Date(2020, 12, 28), y:  2162775},
+        { x: new Date(2020, 12, 29), y:  2178580},
+        { x: new Date(2020, 12, 30), y:  2194272},
+        { x: new Date(2020, 12, 31), y:  2208855},
+        { x: new Date(2021, 01, 01), y:  2220855},
+        { x: new Date(2021, 01, 02), y:  2232035},
+        { x: new Date(2021, 01, 03), y:  2241912},
+        { x: new Date(2021, 01, 04), y:  2255607},
+        { x: new Date(2021, 01, 05), y:  2270101},
+        { x: new Date(2021, 01, 06), y: 2283931 },
+        { x: new Date(2021, 01, 07), y:  2296102},
+        { x: new Date(2021, 01, 08), y:  2307581},
+        { x: new Date(2021, 01, 09), y:  2317118},
+        { x: new Date(2021, 01, 10), y:  2326256},
+        { x: new Date(2021, 01, 11), y: 2336476 },
+        { x: new Date(2021, 01, 12), y:  2346285},
+        { x: new Date(2021, 01, 13), y:  2355839},
+        { x: new Date(2021, 01, 14), y:  2364801},
+        { x: new Date(2021, 01, 15), y: 2373115 },
+    
+            ]
+        }]
+    });
+    chart.render();
+    
+    function toogleDataSeries(e){
+        if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+        } else{
+            e.dataSeries.visible = true;
+        }
+        chart.render();
+    }
+    
+    }
+    
+    
+      </script>
+</head>
+
+<body>
+
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+</html>
